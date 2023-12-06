@@ -1,7 +1,18 @@
-import { Elysia } from "elysia";
+import cors from '@elysiajs/cors';
+import { Elysia } from 'elysia';
 
-const app = new Elysia().get("/", () => "Hello Elysia").listen(3000);
+import { auth } from '@utils/providers';
 
-console.log(
-  `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
+
+const app = new Elysia()
+    .use(cors())
+    .use(auth)
+    .listen(
+        {
+            port: process.env.PORT,
+            hostname: process.env.HOSTNAME,
+        },
+        ({ hostname, port }) => {
+            console.log(`🦊 Elysia is running at ${hostname}:${port}`);
+        }
 );

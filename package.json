@@ -1,31 +1,31 @@
 {
-  "name": "redbull-counter-api",
-  "version": "1.0.50",
-  "scripts": {
-    "barrel": "pnpm barrelgun shoot -c barrelgun.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write .",
-    "dev": "bun run --watch src/index.ts",
-    "db-pull": "dotenv -e .env.development -- npx prisma db pull",
-    "generate-schema": "dotenv -e .env.development -- npx prisma generate"
-  },
-  "dependencies": {
-    "@bogeychan/elysia-logger": "^0.0.17",
-    "@bogeychan/elysia-oauth2": "^0.0.19",
-    "@elysiajs/bearer": "^0.8.0",
-    "@elysiajs/cors": "^0.8.0",
-    "@elysiajs/jwt": "^0.8.0",
-    "@prisma/client": "5.6.0",
-    "@supabase/supabase-js": "^2.39.0",
-    "axios": "^1.6.2",
-    "elysia": "^0.8.17",
-    "lodash": "^4.17.21",
-    "redis": "^4.6.11"
-  },
-  "devDependencies": {
-    "barrelgun": "^1.2.2",
-    "bun-types": "latest",
-    "prisma": "^5.6.0"
-  },
-  "module": "src/index.js"
+    "name": "redbull-counter-api",
+    "version": "1.0.50",
+    "scripts": {
+        "barrel": "pnpm barrelgun shoot -c barrelgun.config.js",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "format": "prettier --write .",
+        "dev": "bun run --watch src/index.ts",
+        "db-pull": "dotenv -e .env.development -- npx prisma db pull",
+        "generate-schema": "dotenv -e .env.development -- npx prisma generate"
+    },
+    "dependencies": {
+        "@bogeychan/elysia-logger": "^0.0.17",
+        "@bogeychan/elysia-oauth2": "^0.0.19",
+        "@elysiajs/bearer": "^0.8.0",
+        "@elysiajs/cors": "^0.8.0",
+        "@elysiajs/jwt": "^0.8.0",
+        "@prisma/client": "5.6.0",
+        "@supabase/supabase-js": "^2.39.0",
+        "axios": "^1.6.2",
+        "elysia": "^0.8.17",
+        "lodash": "^4.17.21",
+        "redis": "^4.6.11"
+    },
+    "devDependencies": {
+        "barrelgun": "^1.2.2",
+        "bun-types": "latest",
+        "prisma": "^5.6.0"
+    },
+    "module": "src/index.js"
 }

@@ -1,7 +1,8 @@
-import { announce } from '@services/slack/slack.service';
-
+import { slackService } from '@services/slack';
 import { generalSlackBodyDto } from './slack.dto';
 
-export const announceRedBull = (body: generalSlackBodyDto) => {
-    announce(body);
-};
+export class slackController {
+    static announceRedBull = (body: generalSlackBodyDto) => {
+        return slackService.announce(body);
+    };
+}

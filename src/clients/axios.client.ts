@@ -1,4 +1,4 @@
-import CreateAxiosInstance from '@types';
+import { CreateAxiosInstance } from '@types';
 import axios, { AxiosInstance } from 'axios';
 
 export const createAxiosInstance = ({

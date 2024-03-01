@@ -1,9 +1,11 @@
 import cors from '@elysiajs/cors';
 import { Elysia } from 'elysia';
 
-import { slackRouter } from '@routes/slackRouter';
 import { auth } from '@utils/providers';
 import jwt from '@elysiajs/jwt';
+
+import { authRouter, counterRouter, slackRouter, userRouter } from '@routes';
+
 const app = new Elysia({ prefix: '/api' })
     /**
      * * This middleware is used to handle the CORS preflight request
@@ -28,7 +30,10 @@ const app = new Elysia({ prefix: '/api' })
         })
     )
     .use(auth)
+    .use(authRouter)
+    .use(counterRouter)
     .use(slackRouter)
+    .use(userRouter)
     .listen(
         {
             port: process.env.PORT || 3001,

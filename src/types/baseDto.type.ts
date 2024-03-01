@@ -1,10 +1,6 @@
-import {
-    ElysiaLogger,
-    Logger,
-    StandaloneLoggerOptions,
-} from '@bogeychan/elysia-logger/src/types';
+import { ElysiaLogger } from '@bogeychan/elysia-logger/src/types';
 import { JWTPayloadSpec } from '@elysiajs/jwt';
-import { Context, Elysia, TSchema, UnwrapSchema } from 'elysia';
+import { Context, TSchema, UnwrapSchema } from 'elysia';
 
 export type BaseDto = Context & {
     log: ElysiaLogger;

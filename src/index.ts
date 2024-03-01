@@ -6,7 +6,7 @@ import jwt from '@elysiajs/jwt';
 
 import { authRouter, counterRouter, slackRouter, userRouter } from '@routes';
 
-const app = new Elysia({ prefix: '/api' })
+new Elysia({ prefix: '/api' })
     /**
      * * This middleware is used to handle the CORS preflight request
      * * https://github.com/elysiajs/elysia-cors/issues/48

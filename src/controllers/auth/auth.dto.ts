@@ -22,7 +22,6 @@ export type loginBodyDto = {
     body: (typeof loginBodyElysiaDto.body)['body'];
 } & BaseDto;
 
-
 export type registerBodyDto = {
     body: (typeof registerBodyElysiaDto.body)['body'];
 } & BaseDto;

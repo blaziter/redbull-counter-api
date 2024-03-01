@@ -14,4 +14,4 @@ const barrels = [
     },
 ];
 
-module.exports = { barrels };
+export default { barrels };

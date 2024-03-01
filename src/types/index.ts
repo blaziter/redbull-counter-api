@@ -1,1 +1,2 @@
-export { CreateAxiosInstance as default } from './axiosInstance.type';
+export * from './axiosInstance.type';
+export * from './baseDto.type';

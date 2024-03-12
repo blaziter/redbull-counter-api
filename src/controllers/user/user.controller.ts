@@ -1,12 +1,12 @@
-import { userService } from '@services/user';
+import { UserService } from '@services/user';
 import { BaseDto } from '@types';
 import { findOneUserDto } from './user.dto';
 
-export class userController {
+export class UserController {
     static findAll = async (ctx: BaseDto) => {
-        return userService.findAll(ctx);
+        return UserService.findAll(ctx);
     };
     static findOne = async (ctx: findOneUserDto) => {
-        return userService.findOne(ctx);
+        return UserService.findOne(ctx);
     };
 }

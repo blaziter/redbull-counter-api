@@ -1,8 +1,8 @@
-import { counterService } from '@services/counter';
+import { CounterService } from '@services/counter';
 import { addOneBodyDto } from './counter.dto';
 
-export class counterController {
+export class CounterController {
     static addOne = async (ctx: addOneBodyDto) => {
-        return counterService.addOne(ctx);
+        return CounterService.addOne(ctx);
     };
 }

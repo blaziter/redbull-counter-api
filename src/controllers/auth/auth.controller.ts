@@ -1,12 +1,12 @@
-import { authService } from '@services/auth';
+import { AuthService } from '@services/auth';
 import { loginBodyDto, registerBodyDto } from './auth.dto';
 
-export class authController {
+export class AuthController {
     static login = async (ctx: loginBodyDto) => {
-        return authService.login(ctx);
+        return AuthService.login(ctx);
     };
 
     static register = async (ctx: registerBodyDto) => {
-        return authService.register(ctx);
+        return AuthService.register(ctx);
     };
 }

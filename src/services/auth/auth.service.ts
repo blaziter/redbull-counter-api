@@ -2,7 +2,7 @@ import { prismaClient } from '@clients';
 import { loginBodyDto, registerBodyDto } from '@controllers/auth';
 import { isDefined } from '@utils/validators';
 
-export class authService {
+export class AuthService {
     static login = async (ctx: loginBodyDto) => {
         const { username, password } = ctx.body;
 

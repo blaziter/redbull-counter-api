@@ -3,7 +3,7 @@ import { findOneUserDto } from '@controllers/user';
 import { BaseDto } from '@types';
 import { isDefined } from '@utils/validators';
 
-export class userService {
+export class UserService {
     static findOne = async (ctx: findOneUserDto) => {
         const { id } = ctx.params;
 

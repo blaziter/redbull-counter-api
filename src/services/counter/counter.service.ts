@@ -1,8 +1,9 @@
 import { prismaClient } from '@clients';
 import { addOneBodyDto } from '@controllers/counter';
+import { AnnouncerService } from '@services/announcer/announcer.service';
 import { isDefined } from '@utils/validators';
 
-export class counterService {
+export class CounterService {
     static addOne = async (ctx: addOneBodyDto) => {
         const { userId } = ctx.body;
 
@@ -21,6 +22,8 @@ export class counterService {
                     count: result.count + 1,
                 },
             });
+
+            AnnouncerService.announce(ctx);
 
             ctx.log.info(`Added one drink to ${result.user_id}`);
             return {

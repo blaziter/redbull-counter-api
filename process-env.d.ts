@@ -10,6 +10,7 @@ namespace NodeJS {
         SLACK_OAUTH_V2_ACCESS_URL: string;
         SLACK_SIGNIN_URL: string;
         SLACK_WEBHOOK_URL: string;
+        DISCORD_WEBHOOK_URL: string;
         DATABASE_PASSWORD: string;
         DATABASE_URL: string;
     }
